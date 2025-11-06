@@ -1,0 +1,68 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow: hidden;
+        }
+
+        .half {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        .left {
+            background-color: gold;
+        }
+
+        .right {
+            background-color: skyblue;
+            left: 50%;
+        }
+
+        .content {
+            height: 200%;
+        }
+
+        h2 {
+            position: fixed;
+        }
+
+        p {
+            padding-top: 50px;
+        }
+
+        img {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .stamp-right{
+            margin-top: 14px;
+            font-size: clamp(11px, 1vw, 13px);
+            color: #666;
+            line-height: 1.4;
+            opacity: 0.85;
+}
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .square {
+            width: 100px;
+            vertical-align: top;
+            margin: 5px;
+        }
+
+        @media screen and (max-width: 704px) {
+
+}
+
