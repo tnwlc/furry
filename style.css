@@ -42,7 +42,8 @@
             width: 100%;
             margin-top: 20px;
         }
-
+        .contnet img{cursor: zoom-in}
+        
         .stamp-right{
             margin-top: 14px;
             font-size: clamp(11px, 1vw, 13px);
