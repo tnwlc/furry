@@ -12,8 +12,6 @@
 </head>
 <body>
 
-</div>
-
 	<div class="half left">
         <div class="content">
             <h2>Furry Beings</h2>
@@ -21,18 +19,9 @@
             <img src="furrydraw/cat.jpg">
             <img src="furrydraw/cat2.jpg">
             <img src="furrydraw/cat3.jpg">
-            <img src="furrydraw/dog2.jpg">
             <img src="furrydraw/dog1.jpg">
-            <img src="furrydraw/dog3.jpg">
-            
-            <div class="img-container">
-                <img class="square" src="furrydraw/1.jpg">
-                <img class="square" src="furrydraw/2.jpg">
-            </div>
 
-            <div class="img-container">
-                <img class="square" src="furrydraw/3.jpg">
-                <img class="square" src="furrydraw/4.jpg">
+            
             </div>
         </div>
     </div>
@@ -45,16 +34,33 @@
             <p>I draw furry companions to observre small behaviors and quiet a gesture that often go unnoticed. They show honest movement and simple intention that i want to record by hand. 
 
             It takes time to record the kind of intentions animals offer takes time, but that time is never wasted.</p>
-          
+        <footer class="foot">
+      		<a class="backhome" href="http://tnwlc.github.io/drawing_home">
+       		 🧚🏻 back to drawing home
+      		</a>
+    	</footer>
+
           <div class="stamp-right">
-      	  entry logged: nov 7, 2025<br>
+      	  entry logged: nov 17, 2025<br>
         last post: nov 7, 2025<br>
         seoul
      		 </div>
        
         </div>
     </div>
-	
+	<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".content img");
+
+    images.forEach(img => {
+      img.classList.add("zoomable");
+
+      img.addEventListener("click", function() {
+        img.classList.toggle("zoomed");
+      });
+    });
+  });
+</script>
 
 
 </body>
