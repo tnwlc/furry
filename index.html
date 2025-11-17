@@ -52,16 +52,30 @@
   document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".content img");
 
-    images.forEach(img => {
-      img.classList.add("zoomable");
+    images.forEach((img) => {
+      // 커서 모양만 줌
+      img.style.cursor = "zoom-in";
 
-      img.addEventListener("click", function() {
-        img.classList.toggle("zoomed");
+      img.addEventListener("click", () => {
+        // 오버레이 요소 생성
+        const overlay = document.createElement("div");
+        overlay.className = "zoom-overlay";
+
+        // 클릭한 이미지를 복사해서 크게 띄우기
+        const bigImg = img.cloneNode(true);
+        overlay.appendChild(bigImg);
+
+        // 오버레이를 화면에 추가
+        document.body.appendChild(overlay);
+
+        // 오버레이 아무 데나 클릭하면 닫기
+        overlay.addEventListener("click", () => {
+          overlay.remove();
+        });
       });
     });
   });
 </script>
-
 
 </body>
 </html>
