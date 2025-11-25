@@ -5,7 +5,9 @@
         }
         
         body {
-            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            margin:0;
         }
 
         .half {
@@ -14,6 +16,8 @@
             overflow-y: auto;
             overflow-x: hidden;
             padding: 20px;
+            width: 50%;
+            box-sizing: border-box;
         }
 
         .left {
@@ -131,7 +135,7 @@
         }
 
 
-      @media (max-width: 860px) {
+      @media (max-width: 768px) {
 
           body {
             display: flex;
@@ -145,7 +149,7 @@
 
           .right {
             /* 모바일에선 1열 레이아웃이면 width/left 안 쓰는 게 자연스러워 */
-            order: 0;
+            order: -1;
             background-color: white;
           }
 
